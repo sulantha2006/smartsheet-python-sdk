@@ -1,7 +1,6 @@
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 import sys
-import six
 
 NAME = 'smartsheet-python-sdk'
 
@@ -28,7 +27,7 @@ class PyTest(TestCommand):
 
     def finalize_options(self):
         TestCommand.finalize_options(self)
-        if isinstance(self.pytest_args, six.string_types):
+        if isinstance(self.pytest_args, str):
             self.pytest_args = [self.pytest_args]
         self.test_args = []
         self.test_suite = True
