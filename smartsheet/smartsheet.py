@@ -45,7 +45,7 @@ def fresh_operation(op_id):
     operation = {
         "path": "",
         "headers": {},
-        "header_params": {"Content-type": "application/json"},
+        "header_params": {"Accept": "application/json"},
         "path_params": {},
         "query_params": {},
         "params": {},
