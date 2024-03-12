@@ -27,7 +27,7 @@ class PyTest(TestCommand):
 
     def finalize_options(self):
         TestCommand.finalize_options(self)
-        if isinstance(self.pytest_args, str):
+        if isinstance(self.pytest_args, str ):
             self.pytest_args = [self.pytest_args]
         self.test_args = []
         self.test_suite = True
